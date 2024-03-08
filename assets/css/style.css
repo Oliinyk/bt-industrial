@@ -84,6 +84,9 @@ body {
     font-weight: 500;
     padding: 19px 30px;
 }
+.btn-primary:hover {
+    background-color: #000;
+}
 .white-btn {
     background-color: #fff;
     color: #0A306B;
@@ -145,6 +148,150 @@ body {
     padding-left: 5px;
 }
 
+/* side-menu-holder */
+.side-menu-wrapper {
+    width: 300px;
+    top: 0;
+    right: -340px;
+    margin-right: 0px;
+    margin-left: 0px;
+    transition: 1s;
+    z-index: 999999;
+    position: fixed;
+}
+.side-menu-wrapper.open {
+    right: 0;
+}
+.side_menu_overlay {
+    background-color: rgba(0, 0, 0, 0.60);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: 1s;
+    opacity: 0;
+    display: none;
+}
+.side-menu-wrapper.open .side_menu_overlay {
+    display: block;
+    opacity: 1;
+}
+.side-menu-items {
+    background-color: #062F6E;
+    background-image: url('../images/bird-bg-2.png');
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    height: 100vh;
+    overflow-x: hidden;
+    transition: 1s;
+}
+.close-side-menu {
+    position: absolute;
+    left: -40px;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    font-size: 22px;
+    top: 50px;
+    color: #fff;
+    background-color: #062F6E;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+}
+.side-menu-search {
+    padding: 50px 20px 30px 20px;
+}
+.side-menu-search-holder {
+    display: flex;
+    overflow: hidden;
+}
+.side-menu-search-holder input {
+    border: none;
+    border-radius: 0px;
+    flex: 1;
+    min-width: 0;
+    background-color: #fff;
+    padding: 10px 20px 10px 20px;
+    font-size: 16px;
+    line-height: 1.5;
+    outline: none;
+}
+.side-menu-search-holder button {
+    border: none;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    background-color: #fff;
+    color: #000;
+    padding: 8px 16px;
+    font-size: 16px;
+}
+.side-menu-holder ul a {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    text-decoration: none;
+    position: relative;
+    flex-direction: row;
+    padding: 20px 15px 15px 15px;
+    background-color: rgba(255, 255, 255, 0);
+    font-family: "Metronic Pro", Sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 15px;
+    color: #fff;
+    margin: 0px 0px 0px 0px;
+    border-style: solid;
+    border-width: 1px 0px 0px 0px;
+    border-color: rgba(255, 255, 255, 0.22);
+}
+.side-menu-holder ul a:hover {
+    background-color: #001E4C;
+    color: #fff;
+}
+.side-menu-holder ul a:hover:after {
+    content: "";
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+    left: 0;
+    background-color: #FFFFFF;
+    z-index: 2;
+    position: absolute;
+}
+
+.side-menu-holder li.current-menu-item > a {
+    background-color: #FFFFFFDE;
+    color: var(--e-global-color-accent);
+    font-size: 16px;
+    font-weight: 400;
+}
+.menu-item-pointer {
+    display: inline-block;
+    margin: 0px 15px;
+    vertical-align: middle;
+}
+.side-menu-holder .sub-menu {
+    overflow: hidden;
+    list-style: none;
+    height: auto;
+    transition: 0.5s;
+}
+
+
+
+
+
 /* hero */
 .hero {
     position: relative;
@@ -165,12 +312,15 @@ body {
     border-right: 1px solid #ECECEC;
     padding: 25px 30px 20px;
 }
-.hero-header .toggle-btn {
+.hero-header .toggle-btn-wrap {
     border-left: 1px solid #ECECEC;
     border-right: 1px solid #ECECEC;
     display: flex;
     align-items: center;
     padding: 25px 68px 20px;
+}
+.hero-header .toggle-btn {
+    cursor: pointer;
 }
 .hero-row {
     display: flex;
@@ -541,7 +691,6 @@ body {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    border-bottom: 1px solid #ECECEC;
     color: #fff;
 }
 .serving-section .inner-row {
@@ -580,6 +729,12 @@ body {
     color: #fff;
     display: flex;
     align-items: center;
+}
+
+/* map-section */
+.map-section .map {
+    height: 700px;
+    width: 100%;
 }
 
 /* footer */
