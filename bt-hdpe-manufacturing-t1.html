@@ -101,7 +101,7 @@
                         </ul>
                         <div class="btn-wrap">
                             <p class="text-bold">Get Product Specs + Custom Quote in <span class="text-underline">24 Hours or Less</span></p>
-                            <a href="#" class="btn btn-primary">GET YOUR CUSTOM QUOTE NOW</a>
+                            <a href="#" class="btn btn-primary openModalJs">GET YOUR CUSTOM QUOTE NOW</a>
                             <p>Serving <a href="#" class="text-default text-underline   ">All of Africa</a> & Global Industries</p>
                         </div>
                     </div>
@@ -420,37 +420,11 @@
     <!-- scroll to top -->
     <div class="scroll-to-top"><span class="inner-line"></span></div>
 
-    <!-- svg sprite -->
-    <div class="main_svg" hidden>
-        <svg>
-            <defs>
-                <!-- circle-arrow -->
-                <symbol id="circle-arrow" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M15 2.5C8.10754 2.5 2.5 8.10755 2.5 15C2.5 21.8925 8.10754 27.5 15 27.5C21.8925 27.5 27.5 21.8925 27.5 15C27.5 8.10755 21.8925 2.5 15 2.5ZM15 4.375C20.8791 4.375 25.625 9.12087 25.625 15C25.625 20.8791 20.8791 25.625 15 25.625C9.12087 25.625 4.375 20.8791 4.375 15C4.375 9.12087 9.12087 4.375 15 4.375ZM15.9277 10.3027C15.7412 10.3028 15.5588 10.3585 15.4041 10.4627C15.2494 10.567 15.1292 10.715 15.0591 10.8879C14.989 11.0608 14.972 11.2507 15.0104 11.4333C15.0488 11.6159 15.1408 11.7828 15.2747 11.9128L17.4243 14.0625H10.3125C10.1883 14.0607 10.0649 14.0837 9.94965 14.13C9.83436 14.1763 9.72944 14.2451 9.64097 14.3324C9.5525 14.4196 9.48224 14.5235 9.43429 14.6381C9.38634 14.7528 9.36165 14.8758 9.36165 15C9.36165 15.1242 9.38634 15.2472 9.43429 15.3619C9.48224 15.4765 9.5525 15.5804 9.64097 15.6676C9.72944 15.7549 9.83436 15.8237 9.94965 15.87C10.0649 15.9163 10.1883 15.9393 10.3125 15.9375H17.4243L15.2747 18.0872C15.1847 18.1735 15.1129 18.277 15.0634 18.3915C15.0139 18.506 14.9877 18.6292 14.9865 18.7539C14.9852 18.8787 15.0088 19.0024 15.056 19.1179C15.1031 19.2334 15.1728 19.3383 15.261 19.4265C15.3492 19.5147 15.4542 19.5844 15.5696 19.6315C15.6851 19.6787 15.8088 19.7023 15.9336 19.701C16.0583 19.6998 16.1815 19.6736 16.296 19.6241C16.4105 19.5746 16.514 19.5028 16.6003 19.4128L20.3503 15.6628C20.5261 15.487 20.6248 15.2486 20.6248 15C20.6248 14.7514 20.5261 14.513 20.3503 14.3372L16.6003 10.5872C16.513 10.4972 16.4084 10.4256 16.2929 10.3768C16.1773 10.3279 16.0532 10.3027 15.9277 10.3027Z" fill="black"/>
-                </symbol>
-                <symbol id="location-ico" viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"></path>
-                </symbol>
-                <symbol id="tel-ico" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M497.39 361.8l-112-48a24 24 0 0 0-28 6.9l-49.6 60.6A370.66 370.66 0 0 1 130.6 204.11l60.6-49.6a23.94 23.94 0 0 0 6.9-28l-48-112A24.16 24.16 0 0 0 122.6.61l-104 24A24 24 0 0 0 0 48c0 256.5 207.9 464 464 464a24 24 0 0 0 23.4-18.6l24-104a24.29 24.29 0 0 0-14.01-27.6z"></path>
-                </symbol>
-                <symbol id="earth-ico" viewBox="0 0 496 512" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M336.5 160C322 70.7 287.8 8 248 8s-74 62.7-88.5 152h177zM152 256c0 22.2 1.2 43.5 3.3 64h185.3c2.1-20.5 3.3-41.8 3.3-64s-1.2-43.5-3.3-64H155.3c-2.1 20.5-3.3 41.8-3.3 64zm324.7-96c-28.6-67.9-86.5-120.4-158-141.6 24.4 33.8 41.2 84.7 50 141.6h108zM177.2 18.4C105.8 39.6 47.8 92.1 19.3 160h108c8.7-56.9 25.5-107.8 49.9-141.6zM487.4 192H372.7c2.1 21 3.3 42.5 3.3 64s-1.2 43-3.3 64h114.6c5.5-20.5 8.6-41.8 8.6-64s-3.1-43.5-8.5-64zM120 256c0-21.5 1.2-43 3.3-64H8.6C3.2 212.5 0 233.8 0 256s3.2 43.5 8.6 64h114.6c-2-21-3.2-42.5-3.2-64zm39.5 96c14.5 89.3 48.7 152 88.5 152s74-62.7 88.5-152h-177zm159.3 141.6c71.4-21.2 129.4-73.7 158-141.6h-108c-8.8 56.9-25.6 107.8-50 141.6zM19.3 352c28.6 67.9 86.5 120.4 158 141.6-24.4-33.8-41.2-84.7-50-141.6h-108z"></path>
-                </symbol> 
-            </defs>
-        </svg>
-    </div>
-
-
     <div class="side-menu-wrapper">
-
         <div class="side_menu_overlay"></div>
-
         <div class="close-side-menu">
             <i class="fas fa-times"></i>
         </div>
-
-
         <div class="side-menu-holder">
             <div class="side-menu-items">
                 <div class="side-menu-search">
@@ -467,9 +441,9 @@
                         <a href="https://bt-industrial.co.za/bt-hdpe-manufacturing/">BT HDPE MANUFACTURING</a>
                     </li>
                     <li class="menu-item menu-item-has-children">
-                        <a href="#" class="collapsed">HDPE SERVICES TO INDUSTRIES<span class="menu-item-pointer"><i class="fas fa-angle-down"></i></span>
+                        <a href="#" class="menu-item-btn collapsed">HDPE SERVICES TO INDUSTRIES<span class="menu-item-pointer"><i class="fas fa-angle-down"></i></span>
                         </a>
-                        <ul class="sub-menu" data-collapsed="true" style="height: 0px;">
+                        <ul class="sub-menu">
                             <li class="menu-item"><a href="https://bt-industrial.co.za/bt-industrial-mining-hdpe/">Mining Sector</a></li>
                             <li class="menu-item"><a href="https://bt-industrial.co.za/private-value-propositions-construction-infrastructure/">Construction &amp; Infrastructure</a></li>
                             <li class="menu-item"><a href="https://bt-industrial.co.za/retail-and-commercial-buildings/">Retail and Commercial Buildings</a></li>
@@ -493,8 +467,8 @@
                         <a href="https://bt-industrial.co.za/csi-projects/">CSI PROJECTS</a>
                     </li>
                     <li class="menu-item menu-item-has-children">
-                        <a href="#" class="collapsed">MEDIA<span class="menu-item-pointer"><i class="fas fa-angle-down"></i></span></a>
-                        <ul class="sub-menu" data-collapsed="true" style="height: 0px;">
+                        <a href="#" class="menu-item-btn collapsed">MEDIA<span class="menu-item-pointer"><i class="fas fa-angle-down"></i></span></a>
+                        <ul class="sub-menu">
                             <li class="menu-item"><a href="https://bt-industrial.co.za/media-video-podcasts/">VIDEOS &amp; PODCASTS</a></li>
                             <li class="menu-item"><a href="https://bt-industrial.co.za/media-events/">EVENTS GALLERY</a></li>
                             <li class="menu-item"><a href="https://bt-industrial.co.za/media-articles-case-studies/">ARTICLES &amp; CASE STUDIES</a></li>
@@ -509,6 +483,142 @@
 
     </div>
 
+    <!-- popup -->
+    <div class="popup-wrap">
+        <div class="popup">
+            <span class="close-btn"><svg class="close-ico"><use xlink:href="#close-ico"></use></svg></span>
+            <div class="form-holder">
+                <h2 class="title">Get A Price Quote Now</h2>
+                <ul class="list">
+                    <li>Get custom pricing and specifications.</li>
+                    <li>Get exact dates on the soonest we can deliver for your project.</li>
+                    <li>Discover minimum details we need to get started and ensure highest quality for your environment & industry.</li>
+                </ul>
+                <form class="form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="nameInput" placeholder="Name">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="emailInput" placeholder="Email">
+                        </div>
+                    </div>
+                    <p class="text">Tell us which services you’re interested in, and we’ll contact you at the email provided.</p>
+                    <div class="form-row">
+                        <div class="form-check">
+                            <label class="form-check-label" for="defaultCheck1">
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" checked>
+                                <span class="checkmark"></span>
+                                <span class="checkmark-label">HDPE Pipe Manufacturing</span>
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label" for="defaultCheck2">
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+                                <span class="checkmark"></span>
+                                <span class="checkmark-label">Pipe & Engineering Consulting</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <select class="form-control">
+                                <option>Installation Region / Area</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <select class="form-control">
+                                <option>When Do You Need a Solution?</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="btn-wrap">
+                        <p class="text-bold">Get Product Specs + Custom Quote in <span class="text-underline">24 Hours or Less</span></p>
+                        <a href="#" class="btn btn-primary">GET YOUR CUSTOM QUOTE NOW</a>
+                        <p>Serving <a href="#" class="text-default text-underline   ">All of Africa</a> & Global Industries</p>
+                    </div>
+                </form>
+            </div>
+            <div class="slider-holder">
+                <p class="title">Trusted by Top African & Global Brands</p>
+                <div class="trusted-slider">
+                    <div class="slide-item">
+                        <img src="./assets/images/clients/clients200x200_01.png" alt="client">
+                    </div>
+                    <div class="slide-item">
+                        <img src="./assets/images/clients/clients200x200_03.png" alt="client">
+                    </div>
+                    <div class="slide-item">
+                        <img src="./assets/images/clients/clients200x200_04.png" alt="client">
+                    </div>
+                    <div class="slide-item">
+                        <img src="./assets/images/clients/clients200x200_05.png" alt="client">
+                    </div>
+                    <div class="slide-item">
+                        <img src="./assets/images/clients/clients200x200_07.png" alt="client">
+                    </div>
+                    <div class="slide-item">
+                        <img src="./assets/images/clients/clients200x200_10.png" alt="client">
+                    </div>
+                    <div class="slide-item">
+                        <img src="./assets/images/clients/clients200x200_11.png" alt="client">
+                    </div>
+                    <div class="slide-item">
+                        <img src="./assets/images/clients/clients200x200_12.png" alt="client">
+                    </div>
+                    <div class="slide-item">
+                        <img src="./assets/images/clients/clients200x200_13.png" alt="client">
+                    </div>
+                    <div class="slide-item">
+                        <img src="./assets/images/clients/clients200x200_14.png" alt="client">
+                    </div>
+                    <div class="slide-item">
+                        <img src="./assets/images/clients/clients200x200_15.png" alt="client">
+                    </div>
+                    <div class="slide-item">
+                        <img src="./assets/images/clients/clients200x200_16.png" alt="client">
+                    </div>
+                    <div class="slide-item">
+                        <img src="./assets/images/clients/clients200x200_17.png" alt="client">
+                    </div>
+                    <div class="slide-item">
+                        <img src="./assets/images/clients/clients200x200_18.png" alt="client">
+                    </div>
+                    <div class="slide-item">
+                        <img src="./assets/images/clients/clients200x200_20.png" alt="client">
+                    </div>
+                    <div class="slide-item">
+                        <img src="./assets/images/clients/netcare.png" alt="client">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- svg sprite -->
+    <div class="main_svg" hidden>
+        <svg>
+            <defs>
+                <!-- circle-arrow -->
+                <symbol id="circle-arrow" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15 2.5C8.10754 2.5 2.5 8.10755 2.5 15C2.5 21.8925 8.10754 27.5 15 27.5C21.8925 27.5 27.5 21.8925 27.5 15C27.5 8.10755 21.8925 2.5 15 2.5ZM15 4.375C20.8791 4.375 25.625 9.12087 25.625 15C25.625 20.8791 20.8791 25.625 15 25.625C9.12087 25.625 4.375 20.8791 4.375 15C4.375 9.12087 9.12087 4.375 15 4.375ZM15.9277 10.3027C15.7412 10.3028 15.5588 10.3585 15.4041 10.4627C15.2494 10.567 15.1292 10.715 15.0591 10.8879C14.989 11.0608 14.972 11.2507 15.0104 11.4333C15.0488 11.6159 15.1408 11.7828 15.2747 11.9128L17.4243 14.0625H10.3125C10.1883 14.0607 10.0649 14.0837 9.94965 14.13C9.83436 14.1763 9.72944 14.2451 9.64097 14.3324C9.5525 14.4196 9.48224 14.5235 9.43429 14.6381C9.38634 14.7528 9.36165 14.8758 9.36165 15C9.36165 15.1242 9.38634 15.2472 9.43429 15.3619C9.48224 15.4765 9.5525 15.5804 9.64097 15.6676C9.72944 15.7549 9.83436 15.8237 9.94965 15.87C10.0649 15.9163 10.1883 15.9393 10.3125 15.9375H17.4243L15.2747 18.0872C15.1847 18.1735 15.1129 18.277 15.0634 18.3915C15.0139 18.506 14.9877 18.6292 14.9865 18.7539C14.9852 18.8787 15.0088 19.0024 15.056 19.1179C15.1031 19.2334 15.1728 19.3383 15.261 19.4265C15.3492 19.5147 15.4542 19.5844 15.5696 19.6315C15.6851 19.6787 15.8088 19.7023 15.9336 19.701C16.0583 19.6998 16.1815 19.6736 16.296 19.6241C16.4105 19.5746 16.514 19.5028 16.6003 19.4128L20.3503 15.6628C20.5261 15.487 20.6248 15.2486 20.6248 15C20.6248 14.7514 20.5261 14.513 20.3503 14.3372L16.6003 10.5872C16.513 10.4972 16.4084 10.4256 16.2929 10.3768C16.1773 10.3279 16.0532 10.3027 15.9277 10.3027Z" fill="black"/>
+                </symbol>
+                <symbol id="location-ico" viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"></path>
+                </symbol>
+                <symbol id="tel-ico" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M497.39 361.8l-112-48a24 24 0 0 0-28 6.9l-49.6 60.6A370.66 370.66 0 0 1 130.6 204.11l60.6-49.6a23.94 23.94 0 0 0 6.9-28l-48-112A24.16 24.16 0 0 0 122.6.61l-104 24A24 24 0 0 0 0 48c0 256.5 207.9 464 464 464a24 24 0 0 0 23.4-18.6l24-104a24.29 24.29 0 0 0-14.01-27.6z"></path>
+                </symbol>
+                <symbol id="earth-ico" viewBox="0 0 496 512" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M336.5 160C322 70.7 287.8 8 248 8s-74 62.7-88.5 152h177zM152 256c0 22.2 1.2 43.5 3.3 64h185.3c2.1-20.5 3.3-41.8 3.3-64s-1.2-43.5-3.3-64H155.3c-2.1 20.5-3.3 41.8-3.3 64zm324.7-96c-28.6-67.9-86.5-120.4-158-141.6 24.4 33.8 41.2 84.7 50 141.6h108zM177.2 18.4C105.8 39.6 47.8 92.1 19.3 160h108c8.7-56.9 25.5-107.8 49.9-141.6zM487.4 192H372.7c2.1 21 3.3 42.5 3.3 64s-1.2 43-3.3 64h114.6c5.5-20.5 8.6-41.8 8.6-64s-3.1-43.5-8.5-64zM120 256c0-21.5 1.2-43 3.3-64H8.6C3.2 212.5 0 233.8 0 256s3.2 43.5 8.6 64h114.6c-2-21-3.2-42.5-3.2-64zm39.5 96c14.5 89.3 48.7 152 88.5 152s74-62.7 88.5-152h-177zm159.3 141.6c71.4-21.2 129.4-73.7 158-141.6h-108c-8.8 56.9-25.6 107.8-50 141.6zM19.3 352c28.6 67.9 86.5 120.4 158 141.6-24.4-33.8-41.2-84.7-50-141.6h-108z"></path>
+                </symbol>
+                <symbol id="close-ico" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.5 8.5L39.5 39.5" stroke="black" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round"/>
+                    <path d="M39.5 8.5L8.5 39.5" stroke="black" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round"/>
+                </symbol>
+            </defs>
+        </svg>
+    </div>
 
     <script src="assets/js/jquery-3.3.1.min.js"></script>
     <script src="assets/js/slick.min.js"></script>

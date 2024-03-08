@@ -22,6 +22,9 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
     display: block;
 }
+img {
+    max-width: 100%;
+}
 html {
     height: 100%;
 }
@@ -265,11 +268,10 @@ body {
     height: 3px;
     width: 100%;
     left: 0;
-    background-color: #FFFFFF;
+    background-color: #fff;
     z-index: 2;
     position: absolute;
 }
-
 .side-menu-holder li.current-menu-item > a {
     background-color: #FFFFFFDE;
     color: var(--e-global-color-accent);
@@ -281,16 +283,19 @@ body {
     margin: 0px 15px;
     vertical-align: middle;
 }
+.menu-item-btn.expanded .menu-item-pointer {
+    transform: rotate(180deg);
+}
 .side-menu-holder .sub-menu {
     overflow: hidden;
     list-style: none;
-    height: auto;
-    transition: 0.5s;
+    max-height: 0;
+    transition: max-height 0.15s ease-out;
 }
-
-
-
-
+.side-menu-holder .sub-menu.open {
+    max-height: 500px;
+    transition: max-height 0.25s ease-in;
+}
 
 /* hero */
 .hero {
@@ -848,9 +853,194 @@ body {
     left: 27px;
 }
 
-
-
-
+/* popup */
+.popup-wrap {
+    justify-content: center;
+    align-items: center;
+    pointer-events: all;
+    background-color: rgba(0, 0, 0, .8);
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    display: none;
+}
+.popup-wrap.active {
+    display: flex;
+}
+.popup-wrap.active .popup {
+    display: block;
+}
+.popup {
+    background-color: #fff;
+    max-width: 928px;
+    width: 100%;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    right: 0;
+    bottom: 30px;
+    margin: 0 auto;
+    overflow-y: auto;
+    display: none;
+}
+.popup .form-holder {
+    padding: 60px 110px 40px 110px;
+}
+.popup .title {
+    font-size: 45px;
+    font-weight: 500;
+    margin: 0 0 30px;
+}
+.popup .close-ico {
+    cursor: pointer;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    height: 48px;
+    width: 48px;
+}
+.popup .list {
+    padding-left: 35px;
+    max-width: 500px;
+    margin: 0 0 33px;
+}
+.popup .list li {
+    color: #4D4D4D;
+    font-size: 15px;
+    position: relative;
+    margin: 0 0 13px;
+    line-height: 1.5;
+}
+.popup .list li:before,
+.popup .list li:after {
+    content: '';
+    position: absolute;
+    background-color: #0A306B;
+}
+.popup .list li:before {
+    left: -31px;
+    top: 12px;
+    transform: rotate(45deg);
+    height: 2px;
+    width: 8px;
+}
+.popup .list li:after {
+    left: -27px;
+    top: 10px;
+    transform: rotate(-45deg);
+    height: 2px;
+    width: 17px;
+}
+.popup .form-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 43px;
+}
+.popup .form-group {
+    position: relative;
+    width: 50%;
+}
+.popup .form-group label {
+    color: #4D4D4D;
+    font-size: 14px;
+    position: absolute;
+    left: 0;
+    top: 5px;
+}
+.popup .form-control {
+    border: 0;
+    border-bottom: 1px solid #4D4D4D;
+    font-size: 14px;
+    outline: none;
+    height: 36px;
+    width: calc(100% - 20px);
+}
+.popup .form-group + .form-group .form-control {
+    margin-left: 20px;
+}
+.popup .form-group + .form-group label {
+    left: 20px;
+}
+.popup .text {
+    color: #4D4D4D;
+    font-size: 14px;
+    margin: 0 0 25px;
+}
+.popup .form-check {
+    position: relative;
+}
+.popup .form-check + .form-check {
+    margin-left: 30px;
+}
+.popup .form-check label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.popup .checkmark-label {
+    color: #4D4D4D;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 0 0 10px;
+}
+.popup .form-check-input {
+    height: 26px;
+    width: 26px;
+    z-index: -1;
+    opacity: 0;
+}
+.popup .checkmark {
+    border-radius: 0;
+    border: 2px solid #0A306B;
+    margin: 0;
+    height: 26px;
+    width: 26px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.popup .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 4px;
+    top: 5px;
+    width: 18px;
+    height: 14px;
+    background-image: url('../images/checkmark.svg');
+}
+.popup .form-check-input:checked ~ .checkmark:after {
+    display: block;
+}
+.popup .btn-wrap {
+    text-align: center;
+    margin: 50px 0 0;
+}
+.popup .btn-wrap p {
+    font-size: 14px;
+}
+.popup .btn {
+    display: block;
+    margin: 20px 0 22px;
+}
+.popup .slider-holder {
+    border-top: 1px solid #ECECEC;
+    text-align: center;
+    padding: 40px 20px 45px;
+}
+.popup .slider-holder .title {
+    font-size: 24px;
+    margin: 0 0 15px;
+}
+.popup .trusted-slider {
+    padding: 0 25px;
+}
+.popup .trusted-slider .slide-item {
+    padding: 12px;
+}
 
 @keyframes ue-shine {
     20%, 100% {
