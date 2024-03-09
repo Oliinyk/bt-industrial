@@ -1083,6 +1083,7 @@ body {
     .maximize-minimize-section .text-col,
     .trusted-section .inner-row,
     .testimonial-section .inner-row,
+    .accreditations-section,
     .accreditations-section .inner-row,
     .serving-section .inner-row {
         border: 0;
@@ -1090,7 +1091,9 @@ body {
     .hero .title,
     .maximize-minimize-section .title,
     .trusted-section .title,
-    .accreditations-section .title {
+    .accreditations-section .title,
+    .catalogue-section .title,
+    .serving-section .title {
         font-size: 40px;
     }
     .hero .img-col .description {
@@ -1137,6 +1140,27 @@ body {
     .testimonial-section .testimonial-title {
         font-size: 14px;
     }
+    .custom-quote-section {
+        background-color: #ECECEC;
+        border: 0;
+    }
+    .custom-quote-section .inner-row {
+        flex-wrap: wrap;
+    }
+    .custom-quote-section .text-col {
+        width: 100%;
+        border: 0;
+        order: 2;
+    }
+    .custom-quote-section .img-col {
+        order: 1;
+    }
+    .footer .col:first-child .col-inner {
+        padding: 50px 40px;
+    }
+    .footer .col-inner {
+        padding: 45px 40px;
+    }
 }
 @media (max-width: 767px) {
     .header .middle-col {
@@ -1145,7 +1169,8 @@ body {
     .hero .title,
     .maximize-minimize-section .title,
     .trusted-section .title,
-    .accreditations-section .title {
+    .accreditations-section .title,
+    .catalogue-section .title {
         font-size: 24px;
     }
     .hero .img-col .description {
@@ -1167,6 +1192,9 @@ body {
     }
     .testimonial-section .testimonial-title {
         font-size: 12px;
+    }
+    .serving-section .title {
+        font-size: 32px;
     }
 }
 
