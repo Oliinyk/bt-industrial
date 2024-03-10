@@ -21,19 +21,26 @@ $(document).ready(function () {
         slidesToShow: 7,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 3000,
+        autoplaySpeed: 2000,
         responsive: [
             {
               breakpoint: 1024,
               settings: {
-                slidesToShow: 5.5,
+                slidesToShow: 4,
                 arrows: false,
+                centerMode: true,
+                autoplay: true,
+                autoplaySpeed: 2000,
               }
             },
             {
               breakpoint: 767,
               settings: {
-                slidesToShow: 4.5,
+                slidesToShow: 3,
+                arrows: false,
+                centerMode: true,
+                autoplay: true,
+                autoplaySpeed: 2000,
               }
             }
         ]
@@ -45,6 +52,17 @@ $(document).ready(function () {
         arrows: true,
         dots: true,
     });
+
+    $('.custom-quote-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+        console.log(nextSlide);
+        $('.digit').removeClass('active');
+        $('.digit[data-slide=' + nextSlide + ']').addClass('active');
+
+        $('.custom-quote-section .text-item').removeClass('active');
+        $('.custom-quote-section .text-item[data-slide=' + nextSlide + ']').addClass('active');
+        
+    });
+
     
     // scroll-to-top
     $(".scroll-to-top").click(function() {
@@ -67,5 +85,8 @@ $(document).ready(function () {
         $('body').find('.popup-wrap').addClass('active');
     });
     
+
+    //
+    // $('.sample-container').FlipBook({pdf: 'books/pdf/CondoLiving.pdf'});
 
 });

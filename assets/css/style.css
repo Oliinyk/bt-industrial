@@ -594,6 +594,12 @@ body {
     color: #0A306B;
     opacity: 1;
 }
+.custom-quote-section .text-item {
+    display: none;
+}
+.custom-quote-section .text-item.active {
+    display: block;
+}
 .custom-quote-section .title {
     color: #0A306B;
     font-size: 40px;
@@ -1155,6 +1161,9 @@ body {
     .custom-quote-section .img-col {
         order: 1;
     }
+    .map-section .map {
+        height: 520px;
+    }
     .footer .col:first-child .col-inner {
         padding: 50px 40px;
     }
@@ -1195,6 +1204,21 @@ body {
     }
     .serving-section .title {
         font-size: 32px;
+    }
+    .map-section .map {
+        height: 412px;
+    }
+    .footer .container {
+        padding: 0;
+    }
+    .footer .inner-row {
+        flex-wrap: wrap;
+        border: 0;
+    }
+    .footer .col {
+        border-right: 0;
+        width: 100%;
+        border-bottom: 1px solid #ECECEC;
     }
 }
 
