@@ -314,6 +314,16 @@ body {
     background-repeat: no-repeat;
     background-position: 0 0;
 }
+.hero::before {
+    content: '';
+    background-color: transparent;
+    background-image: linear-gradient(360deg, #000 0%, #00000000 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
 .hero::after {
     content: '';
     position: absolute;
@@ -923,7 +933,7 @@ body {
     background-color: #fff;
     max-width: 928px;
     width: 100%;
-    position: absolute;
+    position: fixed;
     top: 30px;
     left: 0;
     right: 0;
@@ -1549,10 +1559,24 @@ body {
 
 /* page T2 */
 /* hero-t2 */
-.hero-t2{
+.hero-t2 {
     position: relative;
     background-image: url('../images/hero-manufacturing.png');
     background-size: cover;
+}
+.hero-t2 .container {
+    position: relative;
+    z-index: 1;
+}
+.hero-t2::before {
+    content: '';
+    background-color: transparent;
+    background-image: linear-gradient(360deg, #000 0%, #00000000 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
 }
 .hero-t2 .toggle-btn path {
     fill: #fff;
@@ -2097,4 +2121,105 @@ body {
 }
 .serving-section .btn {
     margin: 37px 0 0;
+}
+
+/* map-section-t2 */
+.map-section-t2 {
+    background-color: var(--e-global-color-accent);
+    border-top: 1px solid #ECECEC;
+}
+.map-section-t2 .inner-row {
+    border-left: 1px solid #ECECEC;
+    border-right: 1px solid #ECECEC;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.map-section-t2 .map-col,
+.map-section-t2 .text-col {
+    width: 50%;
+}
+.map-section-t2 .map {
+    height: 500px;
+}
+.map-section-t2 .serving-section {
+    background: none;
+    padding: 50px 70px;
+}
+.map-section-t2 .title {
+    margin: 0 0 85px;
+}
+.map-section-t2 .list li {
+    font-size: 16px;
+}
+
+/* advantage-section */
+.advantage-overlay {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-color: #fff;
+    opacity: 0.6;
+}
+.advantage-section {
+    position: relative;
+    background-image: url('../images/watermark.png');
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: 69% auto;
+}
+.advantage-section .advantage-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 1px solid #ECECEC;
+    position: relative;
+    z-index: 1;
+}
+.advantage-section .advantage-item {
+    display: flex;
+    align-items: center;
+    padding: 5%;
+    border-bottom: 1px solid #ECECEC;
+    transition: background-color 1.7s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+}
+.advantage-section .advantage-item:hover {
+    background-color: #F0F0F08A;
+}
+.advantage-section .advantage-item:nth-child(odd) {
+    border-right: 1px solid #ECECEC;
+}
+.advantage-icon {
+    display: inline-block;
+    line-height: 1;
+    transition: all .3s;
+    font-size: 40px;
+    text-align: center;
+    margin: 0 30px 0 0;
+}
+.advantage-section .item-title {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-top: 8px;
+    margin-bottom: 16px;
+    color: #000;
+}
+.advantage-section .item-description {
+    color: #4d4d4d;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+@media (max-width: 767px) {
+    .advantage-section .advantage-wrap {
+        grid-template-columns: 1fr;
+    }
+    .advantage-section .advantage-item:nth-child(odd) {
+        border-right: 0;
+    }
+    .advantage-icon {
+        margin: 0 0 20px;
+    }
 }

@@ -27,4 +27,11 @@
 	font-display: auto;
 	src: url('../fonts/MetronicPro-Bold.woff') format('woff');
 }
+@font-face {
+	font-family: 'Happy Icons';
+	font-style: normal;
+	font-weight: bold;
+	font-display: auto;
+	src: url('../webfonts/happy-icons.woff2') format('woff');
+}
 /* Fonts CSS */
