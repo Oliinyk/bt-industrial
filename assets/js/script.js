@@ -152,6 +152,21 @@ $(document).ready(function () {
         $('body').find('.popup').removeClass('active');
         $('body').find('.overlay').removeClass('active');
     });
+
+    // chaty-widget
+    $(document).on('mouseenter', '.chatyCtaMainJs', function() {
+        if($('body').find('.chaty-widget').hasClass('was-opened')) {
+            return false;
+        } else {
+            $('body').find('.chaty-widget').addClass('chaty-open');
+        }
+    });
+    $(document).on('mouseleave', '.chatyCtaMainJs', function() {
+        $('body').find('.chaty-widget').removeClass('was-opened')
+    });
+    $(document).on('click', '.chatyCtaCloseJs', function() {
+        $('body').find('.chaty-widget').removeClass('chaty-open').addClass('was-opened');
+    });
     
  
     //

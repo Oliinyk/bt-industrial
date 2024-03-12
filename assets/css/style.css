@@ -1098,14 +1098,175 @@ body {
 .popup .trusted-slider .slide-item {
     padding: 12px;
 }
-
+.chaty-widget {
+    position: fixed;
+    left: 25px;
+    right: auto;
+    bottom: 25px;
+    z-index: 10001;
+}
+.chaty-channel-list {
+    width: 62px;
+}
+.chaty-channel-list .chaty-channel {
+    display: inline-block;
+    border-radius: 50%;
+    margin: 4px;
+    cursor: pointer;
+    box-shadow: 0 3px 6px rgb(0 0 0 / 25%);
+    position: absolute;
+    bottom: 0;
+    opacity: 0;
+    transition: .5s;
+    width: 54px;
+    height: 54px;
+}
+.chaty-open .chaty-channel-list .chaty-channel {
+    opacity: 1;
+}
+.chaty-open .chaty-channel-list .chaty-channel:nth-child(1) {
+    -webkit-transform: translateY(-186px);
+    transform: translateY(-186px);
+}
+.chaty-open .chaty-channel-list .chaty-channel:nth-child(2) {
+    -webkit-transform: translateY(-124px);
+    transform: translateY(-124px);
+}
+.chaty-open .chaty-channel-list .chaty-channel:nth-child(3) {
+    -webkit-transform: translateY(-62px);
+    transform: translateY(-62px);
+}
+.chaty-channel-list .chaty-channel a {
+    display: block;
+    width: 54px;
+    height: 54px;
+}
+.chaty-widget .chaty-icon {
+    background-color: rgb(35, 61, 118);
+    display: block;
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    outline: 0;
+}
+.chaty-widget .chaty-icon svg {
+    height: 100%;
+    width: 100%;
+}
+.chaty-widget .chaty-icon .color-element {
+    fill: rgb(35, 61, 118);
+    color: rgb(35, 61, 118);
+}
+.chaty-i-trigger .chaty-channel {
+    left: 4px;
+    right: auto;
+    position: absolute;
+    bottom: 0;
+    transition: .5s;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 54px;
+    height: 54px;
+}
+.chaty-widget .on-hover-text {
+    animation: ease-out forwards tooltips-horz;
+    text-align: center;
+    min-width: 1em;
+    max-width: 21em;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding: 5px 15px;
+    border-radius: 10px;
+    background: #fff;
+    color: #333;
+    box-shadow: 0 1.93465px 7.73859px rgb(0 0 0 / 15%);
+    font-size: 17px;
+    line-height: 21px;
+    top: 50%;
+    left: calc(100% + 10px);
+    position: absolute;
+    display: none;
+}
+.chaty-widget .on-hover-text:before {
+    left: -18px;
+    right: auto;
+    transform: translate(0.5em, -50%);
+    top: 50%;
+    border-left-width: 0;
+    content: "";
+    border: 5px solid transparent;
+    position: absolute;
+    border-right-color: #ffffff;
+}
+.chaty-i-trigger .on-hover-text {
+    display: block;
+}
+.chaty-widget .chaty-cta-close .on-hover-text {
+    opacity: 0;
+    visibility: hidden;
+}
+.chaty-widget .chaty-cta-close:hover .on-hover-text {
+    opacity: 1;
+    visibility: visible;
+}
+.chaty-channel:hover .on-hover-text {
+    display: block;
+}
+.chaty-i-trigger .chaty-cta-button {
+    z-index: 999;
+    position: relative;
+    transition: .5s;
+    box-shadow: 0 3px 6px rgb(0 0 0 / 25%);
+    border-radius: 50%;
+    width: 54px;
+    height: 54px;
+}
+.chaty-i-trigger .chaty-channel button {
+    background-color: #000;
+    width: 54px;
+    height: 54px;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border-radius: 50%;
+    border: 0;
+    cursor: pointer;
+}
+.chaty-i-trigger .chaty-cta-button svg {
+    fill: #fff;
+}
+.chaty-cta-close {
+    opacity: 0;
+    visibility: hidden;
+}
+.chaty-open .chaty-cta-close {
+    z-index: 1099;
+    opacity: 1;
+    visibility: visible;
+}
+.chaty-open .chaty-cta-close .chaty-cta-button {
+    transform: rotate(180deg);
+}
+.chaty-open .chaty-cta-main {
+    opacity: 0;
+}
 @keyframes ue-shine {
     20%, 100% {
         transform: rotateZ(60deg) translate(0, -80px);
     }
 }
-
-
+@keyframes tooltips-horz {
+    0% {
+        opacity: 0;
+        transform: translate(0, 0);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0, -50%);
+    }
+}
 @media (max-width: 1599px) {
     .hero {
         background-size: cover;
