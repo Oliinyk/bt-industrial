@@ -735,6 +735,17 @@ body {
 .catalogue-section .title {
     font-size: 45px;
     font-weight: 500;
+    margin: 0 0 65px;
+}
+.catalogue-section .widget-container {
+    max-width: 1120px;
+    margin: 0 auto;
+}
+.catalogue-section .df-outline-container .df-wrapper {
+    padding: 10px;
+    background-color: #062f6e;
+    color: #ffffff;
+    text-align: left;
 }
 .catalogue-section .download-btn {
     color: #0A306B;
