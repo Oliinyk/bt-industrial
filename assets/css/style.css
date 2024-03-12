@@ -1339,6 +1339,19 @@ body {
     .hero .item-row {
         justify-content: center;
         padding: 45px 25px 45px;
+        border: 0;
+        position: relative;
+    }
+    .hero .item-row::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        background-color: #ECECEC;
+        margin: 0 auto;
+        height: 1px;
+        width: calc(100% - 40px);
     }
     .hero .list {
         text-align: left;
