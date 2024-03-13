@@ -75,6 +75,19 @@ $(document).ready(function () {
         ]
     });
 
+    $('.custom-quote-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+        console.log(nextSlide);
+        $('.digit').removeClass('active');
+        $('.digit[data-slide=' + nextSlide + ']').addClass('active');
+        $('.custom-quote-section .text-item').removeClass('active');
+        $('.custom-quote-section .text-item[data-slide=' + nextSlide + ']').addClass('active');
+    });
+
+    $('.custom-quote-section .digit').click(function() {
+        let slideIndex = $(this).data('slide');
+        $('.custom-quote-slider').slick('slickGoTo', slideIndex);
+    });
+
     //industrial-slider1
     $('.industrial-slider1').each(function() {
         $( this ).slick({
@@ -120,14 +133,6 @@ $(document).ready(function () {
         ]
     });
 
-    $('.custom-quote-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
-        console.log(nextSlide);
-        $('.digit').removeClass('active');
-        $('.digit[data-slide=' + nextSlide + ']').addClass('active');
-        $('.custom-quote-section .text-item').removeClass('active');
-        $('.custom-quote-section .text-item[data-slide=' + nextSlide + ']').addClass('active');
-    });
-
     // scroll-to-top
     $(".scroll-to-top").click(function() {
         $("html, body").animate({ scrollTop: 0 }, 2000);
@@ -168,8 +173,4 @@ $(document).ready(function () {
         $('body').find('.chaty-widget').removeClass('chaty-open').addClass('was-opened');
     });
     
- 
-    //
-    // $('.sample-container').FlipBook({pdf: 'books/pdf/CondoLiving.pdf'});
-
 });

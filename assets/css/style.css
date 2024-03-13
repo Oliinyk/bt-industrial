@@ -818,6 +818,13 @@ body {
     height: 700px;
     width: 100%;
 }
+.map-section.map-full-centered {
+    height: 700px;
+    overflow: hidden;
+}
+.map-section.map-full-centered .map {
+    height: 1000px;
+}
 
 /* footer */
 .footer {
@@ -1457,6 +1464,12 @@ body {
     .map-section .map {
         height: 520px;
     }
+    .map-section.map-full-centered {
+        height: 520px;
+    }
+    .map-section.map-full-centered .map {
+        height: 800px;
+    }
     .footer .col:first-child .col-inner {
         padding: 50px 40px;
     }
@@ -1645,6 +1658,12 @@ body {
     }
     .map-section .map {
         height: 412px;
+    }
+    .map-section.map-full-centered {
+        height: 412px;
+    }
+    .map-section.map-full-centered .map {
+        height: 700px;
     }
     .footer {
         padding: 0 0 30px;
