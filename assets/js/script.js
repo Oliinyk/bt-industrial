@@ -134,7 +134,7 @@ $(document).ready(function () {
     });
 
     // scroll-to-top
-    $(".scroll-to-top").click(function() {
+    $(".scrollToTopJs").click(function() {
         $("html, body").animate({ scrollTop: 0 }, 2000);
     });
     $(window).scroll(function() {
@@ -144,6 +144,13 @@ $(document).ready(function () {
         else {
             $(".scroll-to-top").fadeOut(300);
         }
+    });
+
+    // scroll to fast quote
+    $(".scrollToFormJs").click(function() {
+        $('html, body').animate({
+            scrollTop: $(".form-holder").offset().top
+        }, 1000);
     });
 
     // open popup

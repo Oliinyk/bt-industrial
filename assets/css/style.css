@@ -2054,6 +2054,7 @@ body {
 .two-items-section .boxcolumn {
     background-color: #fff;
     margin: 15px;
+    height: calc(100% - 30px);
 }
 .two-items-section .thumbnail {
     overflow: hidden;
@@ -2076,11 +2077,16 @@ body {
     background-position: 340px -50px;
     background-repeat: no-repeat;
     background-size: 56% auto;
+    height: calc(100% - 420px);
 }
 .two-items-section .content {
     text-align: center;
     margin-top: 10px;
     line-height: 1.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(100% - 10px);
 }
 .two-items-section .text-row:nth-child(1) {
     margin: 0 0 45px;
@@ -2636,6 +2642,7 @@ body {
     .two-items-section .content-wrap {
         background-position: center center;
         background-size: cover;
+        height: auto;
     }
     .industrial-section .title {
         font-size: 30px;
