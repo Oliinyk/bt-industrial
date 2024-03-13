@@ -1108,8 +1108,15 @@ body {
     font-size: 14px;
 }
 .popup .btn {
+    border: 0;
+    cursor: pointer;
+    font-family: 'Metronic Pro', Sans-serif;
     display: block;
+    text-decoration: none;
+    transition: 0.2s all;
+    text-transform: uppercase;
     margin: 20px 0 22px;
+    width: 100%;
 }
 .popup .slider-holder {
     border-top: 1px solid #ECECEC;
@@ -1724,7 +1731,7 @@ body {
         left: 23px;
     }
     .popup {
-        top: 42px;
+        top: 0;
         bottom: 0;
     }
     .popup .form-holder {
@@ -2025,12 +2032,20 @@ body {
     width: 1em;
 }
 .custom-quote-section-origin .button-link {
+    border: 0;
     color: #fff;
+    cursor: pointer;
     background-color: var(--e-global-color-accent);
+    font-family: 'Metronic Pro', Sans-serif;
     font-size: 16px;
     padding: 15px 30px;
     display: inline-block;
     margin-top: 20px;
+    text-transform: uppercase;
+    transition: 0.2s all;
+}
+.custom-quote-section-origin .button-link:hover {
+    background-color: #000;
 }
 .custom-quote-section-origin .img-col img {
     height: 100%;

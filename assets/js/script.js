@@ -146,13 +146,6 @@ $(document).ready(function () {
         }
     });
 
-    // scroll to fast quote
-    $(".scrollToFormJs").click(function() {
-        $('html, body').animate({
-            scrollTop: $(".form-holder").offset().top
-        }, 1000);
-    });
-
     // open popup
     $(document).on('click', '.openModalJs', function(e) {
         e.preventDefault();
