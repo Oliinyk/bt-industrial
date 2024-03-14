@@ -149,16 +149,36 @@ $(document).ready(function () {
     // open popup
     $(document).on('click', '.openModalJs', function(e) {
         e.preventDefault();
-        $('body').find('.popup').addClass('active');
+        $('body').find('.popup-quote').addClass('active');
         $('body').find('.overlay').addClass('active');
         
         //refresh trusted-slider when open popup
-        $('.popup .trusted-slider').slick('refresh');
+        $('.popup-quote .trusted-slider').slick('refresh');
     });
     // close popup
-    $(document).on('click', '.popup .close-btn, .overlay', function() {
+    $(document).on('click', '.popup .close-btn', function() {
         $('body').find('.popup').removeClass('active');
         $('body').find('.overlay').removeClass('active');
+        $('body').find('.popup-read-more-wrap').removeClass('active');
+    });
+
+    //openReadMoreModalJs
+    $(document).on('click', '.openReadMoreModalJs', function(e) {
+        e.preventDefault();
+        let popupIndex = $(this).data('btn');
+        $('body').find('.popup-read-more-wrap[data-modal=' + popupIndex + ']').addClass('active');
+        $('body').find('[data-modal=' + popupIndex + '] .popup-read-more').addClass('active');
+        $('body').find('.overlay').addClass('active');
+    });
+
+    // click outside popup
+    $(document).mouseup(function(e) {
+        let popup = $('.popup');
+        if (!popup.is(e.target) && popup.has(e.target).length === 0) {
+            $('body').find('.popup').removeClass('active');
+            $('body').find('.overlay').removeClass('active');
+            $('body').find('.popup-read-more-wrap').removeClass('active');
+        }
     });
 
     // chaty-widget
