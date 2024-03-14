@@ -151,6 +151,9 @@ $(document).ready(function () {
         e.preventDefault();
         $('body').find('.popup').addClass('active');
         $('body').find('.overlay').addClass('active');
+        
+        //refresh trusted-slider when open popup
+        $('.popup .trusted-slider').slick('refresh');
     });
     // close popup
     $(document).on('click', '.popup .close-btn, .overlay', function() {
