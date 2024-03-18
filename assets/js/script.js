@@ -95,17 +95,23 @@ $(document).ready(function () {
             slidesToScroll: 1,
             arrows: true,
             dots: true,
+            autoplay: true,
+            autoplaySpeed: 3000,
             responsive: [
                 {
                     breakpoint: 1024,
                     settings: {
                         slidesToShow: 2,
+                        autoplay: true,
+                        autoplaySpeed: 3000,
                     }
                 },
                 {
                     breakpoint: 767,
                     settings: {
                         slidesToShow: 1,
+                        autoplay: true,
+                        autoplaySpeed: 3000,
                     }
                 },
             ]
@@ -117,17 +123,23 @@ $(document).ready(function () {
         slidesToScroll: 1,
         arrows: true,
         dots: true,
+        autoplay: true,
+        autoplaySpeed: 4000,
         responsive: [
             {
                 breakpoint: 1024,
                 settings: {
                     slidesToShow: 2,
+                    autoplay: true,
+                    autoplaySpeed: 4000,
                 }
             },
             {
                 breakpoint: 767,
                 settings: {
                     slidesToShow: 1,
+                    autoplay: true,
+                    autoplaySpeed: 4000,
                 }
             },
         ]

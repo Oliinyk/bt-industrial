@@ -345,7 +345,8 @@ body {
 .hero-header .logo-wrap {
     border-left: 1px solid #ECECEC;
     border-right: 1px solid #ECECEC;
-    padding: 25px 30px 20px;
+    padding: 0 12px;
+    max-width: 225px
 }
 .hero-header .toggle-btn-wrap {
     border-left: 1px solid #ECECEC;
@@ -1585,8 +1586,8 @@ body {
         display: none;
     }
     .hero-header .logo-wrap {
-        max-width: 111px;
-        padding: 15px 20px 13px;
+        max-width: 130px;
+        padding: 2px 10px 2px;
     }
     .hero-header .toggle-btn-wrap {
         padding: 20px;
