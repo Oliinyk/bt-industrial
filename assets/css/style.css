@@ -309,7 +309,7 @@ body {
 /* hero */
 .hero {
     position: relative;
-    background-image: url('../images/hero-manufacturing.png');
+    background-image: url('../images/t1_hearo.jpg');
     background-size: 50%;
     background-repeat: no-repeat;
     background-position: 0 0;
@@ -345,8 +345,8 @@ body {
 .hero-header .logo-wrap {
     border-left: 1px solid #ECECEC;
     border-right: 1px solid #ECECEC;
-    padding: 0 12px;
-    max-width: 225px
+    padding: 4px 15px 0;
+    max-width: 215px;
 }
 .hero-header .toggle-btn-wrap {
     border-left: 1px solid #ECECEC;
@@ -841,14 +841,14 @@ body {
     width: 33.333%;
 }
 .footer .col:first-child .col-inner {
-    padding: 63px 70px;
+    padding: 68px 70px;
     text-align: center;
 }
 .footer .col-inner {
     padding: 65px 70px;
 }
 .footer .logo-wrap {
-    max-width: 235px;
+    max-width: 220px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 20px;
@@ -1912,7 +1912,7 @@ body {
 /* hero-t2 */
 .hero-t2 {
     position: relative;
-    background-image: url('../images/hero-manufacturing.png');
+    background-image: url('../images/t2-hero.jpg');
     background-size: cover;
 }
 .hero-t2 .container {
@@ -2508,8 +2508,12 @@ body {
 .map-section-t2 .text-col {
     width: 50%;
 }
-.map-section-t2 .map {
+.map-section-t2 .map-col {
     height: 500px;
+    overflow: hidden;
+}
+.map-section-t2 .map {
+    height: 830px;
 }
 .map-section-t2 .serving-section {
     background: none;
